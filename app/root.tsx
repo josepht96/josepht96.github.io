@@ -5,7 +5,9 @@ import {
   Outlet,
   Scripts,
   ScrollRestoration,
+  Link,
 } from "react-router";
+import { useState, useEffect } from "react";
 
 import type { Route } from "./+types/root";
 import "./app.css";
@@ -42,7 +44,116 @@ export function Layout({ children }: { children: React.ReactNode }) {
 }
 
 export default function App() {
-  return <Outlet />;
+  const [times, setTimes] = useState({
+    date: "00:00",
+    weekday: "",
+    localTime: "00:00",
+    easternTime: "00:00",
+    utcTime: "00:00",
+    localTime24: "00:00",
+    easternTime24: "00:00",
+    utcTime24: "00:00",
+  });
+
+  useEffect(() => {
+    const updateTimes = () => {
+      const now = new Date();
+
+      setTimes({
+        date: now.toLocaleDateString("en-US", {
+          year: "numeric",
+          month: "long",
+          day: "numeric",
+        }),
+        weekday: now.toLocaleDateString("en-US", {
+          weekday: "long",
+        }),
+        localTime: now.toLocaleTimeString("en-US", {
+          hour: "2-digit",
+          minute: "2-digit",
+          hour12: true,
+          timeZoneName: "short",
+        }),
+        easternTime: now.toLocaleTimeString("en-US", {
+          timeZone: "America/New_York",
+          hour: "2-digit",
+          minute: "2-digit",
+          hour12: true,
+          timeZoneName: "short",
+        }),
+        utcTime: now.toLocaleTimeString("en-US", {
+          timeZone: "UTC",
+          hour: "2-digit",
+          minute: "2-digit",
+          hour12: true,
+          timeZoneName: "short",
+        }),
+        localTime24: now.toLocaleTimeString("en-US", {
+          hour: "2-digit",
+          minute: "2-digit",
+          hour12: false,
+          timeZoneName: "shortOffset",
+        }),
+        easternTime24: now.toLocaleTimeString("en-US", {
+          timeZone: "America/New_York",
+          hour: "2-digit",
+          minute: "2-digit",
+          hour12: false,
+          timeZoneName: "shortOffset",
+        }),
+        utcTime24: now.toLocaleTimeString("en-US", {
+          timeZone: "UTC",
+          hour: "2-digit",
+          minute: "2-digit",
+          hour12: false,
+          timeZoneName: "shortOffset",
+        }),
+      });
+    };
+
+    updateTimes(); // Set initial time
+    const interval = setInterval(updateTimes, 1000); // Update every second
+
+    return () => clearInterval(interval); // Cleanup on unmount
+  }, []);
+
+  return (
+    <>
+      <div className="headerBar">
+        <div className="timeBar">
+          <div>
+            {times.utcTime}, {times.utcTime24}-0
+          </div>
+          <div>
+            {times.easternTime}, {times.easternTime24}
+          </div>
+          <div>
+            {times.localTime}, {times.localTime24}
+          </div>
+        </div>
+        <div className="dateBar">
+          <div>{times.weekday},</div>
+          <div>{times.date}</div>
+        </div>
+        <nav className="navbar">
+          <Link to="/" className="hover:underline">
+            Home
+          </Link>
+          {/* <Link to="/notes" className="hover:underline">
+            Notes
+          </Link>
+          <Link to="/about" className="hover:underline">
+            About
+          </Link> */}
+        </nav>
+        <div className="fillBar"></div>
+      </div>
+
+      <div className="pagebody">
+        <Outlet />
+      </div>
+    </>
+  );
 }
 
 export function ErrorBoundary({ error }: Route.ErrorBoundaryProps) {

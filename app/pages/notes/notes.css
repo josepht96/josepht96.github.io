@@ -1,0 +1,100 @@
+/* Notes section styles */
+.notes-section {
+  margin-top: 40px;
+  padding: 20px;
+  background-color: rgb(227, 227, 227);
+  border-radius: 8px;
+}
+
+.button-container {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.add-row-btn {
+  background-color: #718eac;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.add-row-btn:hover {
+  background-color: #4171a4;
+}
+
+.clear-all-btn {
+  background-color: #b58e92;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.clear-all-btn:hover {
+  background-color: #b35760;
+}
+
+.text-row {
+  margin-bottom: 15px;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.checkbox-container {
+  padding-top: 18px;
+}
+
+.checkbox {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  accent-color: rgb(119, 125, 171);
+}
+.checkbox:checked {
+  opacity: 0.5;
+}
+
+.text-box {
+  flex: 1;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  box-sizing: border-box;
+  resize: vertical;
+  min-height: 40px;
+}
+
+.text-box:focus {
+  outline: none;
+  border-color: #6b8096;
+}
+
+.text-box.completed {
+  /* text-decoration: line-through; */
+  opacity: 0.4;
+}
+
+.delete-btn {
+  /* background-color: #b6babf; */
+  background: rgb(208, 206, 206);
+  color: white;
+  padding: 6px 6px;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.delete-btn:hover {
+  background-color: #abaaaa;
+}

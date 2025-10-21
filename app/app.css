@@ -1,15 +1,84 @@
 @import "tailwindcss";
 
 @theme {
-  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif,
-    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-sans:
+    "Inter", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
 html,
 body {
-  @apply bg-white dark:bg-gray-950;
+  /* @apply bg-white dark:bg-gray-950;
 
   @media (prefers-color-scheme: dark) {
     color-scheme: dark;
-  }
+  } */
+  /* background-color: #000000;
+   color: aliceblue;
+   margin-left: 25%;
+   margin-right: 25%; */
+   background-color: rgb(228, 228, 228);
+}
+
+.home-content {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.home-content p {
+  margin-bottom: 1.5rem;  /* Space between paragraphs */
+  line-height: 1.8;       /* Comfortable reading */
+  text-align: justify;    /* Optional: justify text */
+}
+
+.pagebody {
+  /* background-color: rgb(231, 231, 231); */
+  margin-top: 1%;
+  margin-left: 25%;
+  margin-right: 25%;
+}
+
+.navbar {
+  width: 50%;
+  padding: 1rem;
+  display: flex;
+  gap: 1rem;
+  justify-content: center; /* Centers items horizontally */
+  align-items: center; /* Centers items vertically (optional) */
+}
+
+.navbar a {
+  color: #333;
+  text-decoration: none;
+  transition: 0.1s;
+}
+
+.navbar a:hover {
+  color: hsl(0, 0%, 57%);
+}
+
+.dateBar {
+  width: 15%;
+  padding: 5px;
+  font-size: large;
+  display: flex;
+  flex-direction: column;
+}
+.timeBar {
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+  font-size: small;
+}
+
+.fillBar {
+  width: 35%;
+}
+
+.headerBar {
+  display: flex;
+  width: 100%;
+  border-bottom: 1px solid rgb(205, 205, 205);
 }
