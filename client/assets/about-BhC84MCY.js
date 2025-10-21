@@ -1,0 +1,1 @@
+import{w as o}from"./chunk-OIYGIGL5-ClTiR4dw.js";import{j as t}from"./jsx-runtime-D_zvdyIk.js";function n(){return t.jsx("p",{children:"Not quite ready...yet"})}function i({}){return[{title:"About"},{name:"description",content:"About"}]}const s=o(function(){return t.jsx(n,{})});export{s as default,i as meta};
