@@ -17,26 +17,21 @@ body {
    color: aliceblue;
    margin-left: 25%;
    margin-right: 25%; */
-   background-color: rgb(228, 228, 228);
+  background-color: rgb(228, 228, 228);
 }
 
-.home-content {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 2rem;
+.headerBar {
+  display: flex;
+  width: 100%;
+  border-bottom: 1px solid rgb(205, 205, 205);
 }
 
-.home-content p {
-  margin-bottom: 1.5rem;  /* Space between paragraphs */
-  line-height: 1.8;       /* Comfortable reading */
-  text-align: justify;    /* Optional: justify text */
-}
-
-.pagebody {
-  /* background-color: rgb(231, 231, 231); */
-  margin-top: 1%;
-  margin-left: 25%;
-  margin-right: 25%;
+@media (max-width: 1120px) {
+  .fillBar,
+  .dateBar,
+  .timeBar {
+    display: none;
+  }
 }
 
 .navbar {
@@ -58,6 +53,12 @@ body {
   color: hsl(0, 0%, 57%);
 }
 
+@media (max-width: 1120px) {
+  .navbar {
+    width: 100%;
+  }
+}
+
 .dateBar {
   width: 15%;
   padding: 5px;
@@ -77,8 +78,31 @@ body {
   width: 35%;
 }
 
-.headerBar {
-  display: flex;
-  width: 100%;
-  border-bottom: 1px solid rgb(205, 205, 205);
+@media (max-width: 1120px) {
+  .fillBar,
+  .dateBar,
+  .timeBar {
+    display: none;
+  }
+}
+
+.pagebody {
+  /* background-color: rgb(231, 231, 231); */
+  margin: 1% 25% 10% 25%;
+}
+
+@media (max-width: 1120px) {
+  .pagebody {
+    margin: 1% 1% 5% 1%;
+  }
+}
+
+.home-content {
+  padding: 2rem;
+}
+
+.home-content p {
+  margin-bottom: 1.5rem; /* Space between paragraphs */
+  line-height: 1.8; /* Comfortable reading */
+  text-align: justify; /* Optional: justify text */
 }
