@@ -1,9 +1,60 @@
 /* Notes section styles */
-.notes-section {
-  margin-top: 40px;
-  padding: 20px;
-  background-color: rgb(227, 227, 227);
+.objectives-section {
+  display: flex;
+  width: 100%;
+  transition:
+    max-height 0.3s ease,
+    opacity 0.3s ease,
+    margin-top 0.3s ease;
+  gap: 30px;
+}
+
+.objectives-panel {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  background-color: rgb(170, 170, 170);
   border-radius: 8px;
+}
+
+.objectives-panel.expanded {
+  opacity: 1;
+}
+
+.objectives-panel.collapsed {
+  max-height: 0;
+  opacity: 0;
+  margin-top: 0;
+}
+
+
+.objective-group {
+  margin: 1%;
+  border-radius: 8px;
+  background-color: #d7d7d7;
+  min-height: 50px;
+}
+
+.objective-title {
+  text-align: center;
+  margin: 1% 25% 1% 25%;
+  border-bottom: 1px solid #ccc;
+}
+
+.objective {
+  background-color: aquamarine;
+  margin: 3%;
+}
+
+.text-box {
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  box-sizing: border-box;
+  resize: vertical;
+  min-height: 40px;
 }
 
 .button-container {

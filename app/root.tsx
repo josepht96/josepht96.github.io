@@ -132,12 +132,12 @@ export default function App() {
           </div>
         </div>
         <div className="dateBar">
-          <div>{times.weekday},</div>
-          <div>{times.date}</div>
+          {/* <div>{times.weekday},</div>
+          <div>{times.date}</div> */}
         </div>
         <nav className="navbar">
           <Link to="/" className="hover:underline">
-            Home
+            <div>{times.weekday}, {times.date}</div>
           </Link>
           {/* <Link to="/notes" className="hover:underline">
             Notes
