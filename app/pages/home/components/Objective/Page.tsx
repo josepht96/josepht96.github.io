@@ -9,7 +9,7 @@ export function ObjectiveSection() {
   return (
     <div className="objectives-section">
       <button
-        className="toggle-button"
+        className="toggle-button expand"
         onClick={() => setIsExpanded(!isExpanded)}
       >
         {/* {isExpanded ? "-" : "+"} */}

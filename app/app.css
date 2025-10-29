@@ -115,7 +115,10 @@ body {
 .section {
   display: flex;
   overflow: hidden;
-  transition: max-height 0.3s ease, opacity 0.3s ease, margin-top 0.3s ease;
+  transition:
+    max-height 0.3s ease,
+    opacity 0.3s ease,
+    margin-top 0.3s ease;
   gap: 30px;
 }
 
@@ -126,10 +129,14 @@ body {
   width: 14px;
   height: 14px;
   margin: 5px;
-  background-color: rgb(192, 192, 192);
+
   border-radius: 50%; /* Makes it a circle */
   color: rgb(141, 141, 141);
   cursor: pointer;
+}
+
+.expand {
+  background-color: rgb(192, 192, 192);
 }
 
 .toggle-button:hover {
@@ -138,14 +145,16 @@ body {
 }
 
 @media (max-width: 1120px) {
-  .toggle-button {
+  .expand {
     display: none;
   }
 }
 
-
 .summary {
-  transition: max-height 1s ease, opacity 1s ease, margin-top 1s ease;
+  transition:
+    max-height 1s ease,
+    opacity 1s ease,
+    margin-top 1s ease;
 }
 
 .details {

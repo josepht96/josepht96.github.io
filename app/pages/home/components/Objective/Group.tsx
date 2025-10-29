@@ -27,7 +27,8 @@ interface NotesSectionProps {
 }
 
 export function ObjectiveGroup({ title, sectionKey }: NotesSectionProps) {
-  const [notes, setNotes] = useState<Note[]>([createNote()]);
+  const [notes, setNotes] = useState<Note[]>([]);
+  const [isLoaded, setIsLoaded] = useState(false);
   const today = new Date().toLocaleDateString("en-US", {
     year: "numeric",
     month: "long",
@@ -38,24 +39,34 @@ export function ObjectiveGroup({ title, sectionKey }: NotesSectionProps) {
   useEffect(() => {
     const savedNotes = localStorage.getItem(`${sectionKey}-userNotes`);
     if (savedNotes) {
-      let parsed: Note[] = JSON.parse(savedNotes);
+      try {
+        let parsed: Note[] = JSON.parse(savedNotes);
 
-      // Reset recurring tasks if it's a new day
-      if (sectionKey === "recurring") {
-        parsed = parsed.map((note) => ({
-          ...note,
-          completed: note.completedDate === today ? note.completed : false,
-        }));
+        // Reset recurring tasks if it's a new day
+        if (sectionKey === "recurring") {
+          parsed = parsed.map((note) => ({
+            ...note,
+            completed: note.completedDate === today ? note.completed : false,
+          }));
+        }
+
+        setNotes(parsed.length > 0 ? parsed : [createNote()]);
+      } catch (error) {
+        console.error("Error loading notes:", error);
+        setNotes([createNote()]);
       }
-
-      setNotes(parsed.length > 0 ? parsed : [createNote()]);
+    } else {
+      setNotes([createNote()]);
     }
+    setIsLoaded(true);
   }, [sectionKey, today]);
 
-  // Save notes to localStorage whenever they change
+  // Save notes to localStorage whenever they change (only after initial load)
   useEffect(() => {
-    localStorage.setItem(`${sectionKey}-userNotes`, JSON.stringify(notes));
-  }, [notes, sectionKey]);
+    if (isLoaded) {
+      localStorage.setItem(`${sectionKey}-userNotes`, JSON.stringify(notes));
+    }
+  }, [notes, sectionKey, isLoaded]);
 
   const addNewRow = () => {
     setNotes([createNote(), ...notes]);
@@ -85,17 +96,34 @@ export function ObjectiveGroup({ title, sectionKey }: NotesSectionProps) {
     setNotes(notes.map((note) => (note.id === id ? { ...note, text } : note)));
   };
 
+  if (!isLoaded) {
+    return <div>Loading...</div>;
+  }
+
   return (
     <div className="objective-group">
-      <div className="objective-group-title">{title}</div>
-      <div className="objective">
-        <textarea
-          className="text-box"
-          placeholder="Type your objective here..."
-        ></textarea>
-        <button className="toggle-button complete"></button>
-        <button className="toggle-button delete"></button>
-      </div>
+      <button className="objective-group-title" onClick={addNewRow}>
+        {title}
+      </button>
+      {notes.map((note) => (
+        <div className="objective" key={note.id}>
+          <textarea
+            className="text-box"
+            placeholder="Type your objective here..."
+            value={note.text}
+            onChange={(e) => updateText(note.id, e.target.value)}
+            style={{ opacity: note.completed ? 0.5 : 1 }}
+          ></textarea>{" "}
+          <button
+            className="toggle-button complete"
+            onClick={() => toggleComplete(note.id)}
+          ></button>
+          <button
+            className="toggle-button delete"
+            onClick={() => deleteRow(note.id)}
+          ></button>
+        </div>
+      ))}
     </div>
   );
 }

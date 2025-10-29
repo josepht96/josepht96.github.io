@@ -5,7 +5,7 @@ export function SummarySection() {
   return (
     <div className="section">
       <button
-        className="toggle-button"
+        className="toggle-button expand"
         onClick={() => setIsExpanded(!isExpanded)}
       >
         {/* {isExpanded ? "-" : "+"} */}
