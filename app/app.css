@@ -106,13 +106,13 @@ body {
 }
 
 .home-content p {
-  margin-bottom: 1.5rem; /* Space between paragraphs */
+  margin-bottom: 1rem; /* Space between paragraphs */
   line-height: 1.8; /* Comfortable reading */
   text-align: justify; /* Optional: justify text */
 }
 
 .home-content h1 {
-  margin-bottom: 1.5rem; /* Space between paragraphs */
+  margin-bottom: 1rem; /* Space between paragraphs */
   transition: all 0.3s ease;
 }
 
