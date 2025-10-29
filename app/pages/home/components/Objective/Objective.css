@@ -1,0 +1,94 @@
+/* Notes section styles */
+.objectives-section {
+  display: flex;
+  width: 100%;
+  transition:
+    max-height 0.3s ease,
+    opacity 0.3s ease,
+    margin-top 0.3s ease;
+  gap: 30px;
+}
+
+.objectives-panel {
+  color: #424242;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  background-color: rgb(211, 211, 211);
+  border-radius: 8px;
+}
+
+.objectives-panel.expanded {
+  opacity: 1;
+}
+
+.objectives-panel.collapsed {
+  max-height: 0;
+  opacity: 0;
+  margin-top: 0;
+}
+
+.objective-group {
+  margin: 1%;
+  border-radius: 8px;
+  background-color: rgb(228, 228, 228);
+  min-height: 50px;
+}
+
+.objective-group-title {
+  text-align: center;
+  margin: 1% 25% 1% 25%;
+}
+
+.objective {
+  width: 100%;
+  display: flex;
+  align-items: center; /* Horizontal center */
+  justify-content: center; /* Vertical center */
+  max-height: 65px;
+}
+
+.text-box {
+  margin: 3%;
+  background-color: #ececec;
+  border-radius: 8px;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  resize: none;
+  text-align: center;
+  white-space: nowrap;
+  width: 60%; /* or auto */
+  box-sizing: border-box; /* includes padding in width calculation */
+  border: 2px solid rgb(205, 205, 205);
+  max-height: 30px;
+}
+
+.text-box:focus {
+  outline: none;
+  border-color: #ffffff;
+  border: 2px solid rgb(101, 101, 101);
+}
+
+.text-box::placeholder {
+  opacity: 0.3;
+}
+
+.text-box.completed {
+  /* text-decoration: line-through; */
+  opacity: 0.4;
+}
+
+.complete {
+  background-color: rgb(139, 164, 209);
+}
+.complete:hover {
+  background-color: rgb(11, 140, 246);
+}
+
+.delete {
+  background-color: rgb(219, 177, 177);
+}
+
+.delete:hover {
+  background-color: rgb(238, 53, 53);
+}

@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { ObjectiveGroup } from "./Group";
-import "../../app.css";
+import "../../../../app.css";
 
-import "./objective.css";
+import "./Objective.css";
 
 export function ObjectiveSection() {
   const [isExpanded, setIsExpanded] = useState(true);

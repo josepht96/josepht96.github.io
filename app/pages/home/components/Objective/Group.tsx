@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
-import "./Group.css";
+import "./Objective.css";
+import "../../../../app.css";
 
 // Note type definition
 interface Note {
@@ -86,11 +87,15 @@ export function ObjectiveGroup({ title, sectionKey }: NotesSectionProps) {
 
   return (
     <div className="objective-group">
-      <div className="objective-title">{title}</div>
-      {/* <textarea
-        className="text-box"
-        placeholder="Type your objective here..."
-      ></textarea> */}
+      <div className="objective-group-title">{title}</div>
+      <div className="objective">
+        <textarea
+          className="text-box"
+          placeholder="Type your objective here..."
+        ></textarea>
+        <button className="toggle-button complete"></button>
+        <button className="toggle-button delete"></button>
+      </div>
     </div>
   );
 }
