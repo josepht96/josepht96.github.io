@@ -10,7 +10,7 @@ export function SummarySection() {
       >
         {/* {isExpanded ? "-" : "+"} */}
       </button>
-      <div className="summary">
+      <div draggable="true" className="summary">
         <h1>{isExpanded ? "Hello, my name is Joe Thomas" : "Summary"}</h1>
         <div className={`details ${isExpanded ? "expanded" : "collapsed"}`}>
           <p>

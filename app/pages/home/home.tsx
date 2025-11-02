@@ -1,4 +1,4 @@
-import { ObjectiveSection } from "./components/Objective/Page";
+import { ObjectiveSection } from "./components/Objective/Objective";
 import { SummarySection } from "./summary";
 
 export function Home() {

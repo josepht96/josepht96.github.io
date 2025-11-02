@@ -16,6 +16,7 @@ export function ObjectiveSection() {
       </button>
       {!isExpanded && <h1>Objectives</h1>}
       <div
+        draggable="true"
         className={`objectives-panel ${isExpanded ? "expanded" : "collapsed"}`}
       >
         <ObjectiveGroup title="Short Term" sectionKey="short" />

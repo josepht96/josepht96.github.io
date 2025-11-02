@@ -101,7 +101,7 @@ export function ObjectiveGroup({ title, sectionKey }: NotesSectionProps) {
   }
 
   return (
-    <div className="objective-group">
+    <div draggable="true" className="objective-group">
       <button className="objective-group-title" onClick={addNewRow}>
         {title}
       </button>
