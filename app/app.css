@@ -116,6 +116,21 @@ body {
   transition: all 0.3s ease;
 }
 
+.divider {
+  display: flex;
+  border: none;
+  border-bottom: 1px solid #c3c3c3;
+  margin: 1% 0 3% 49px;
+}
+
+@media (max-width: 1120px) {
+  .divider {
+    margin: 10px;
+  }
+}
+
+
+
 .section {
   display: flex;
   overflow: hidden;
@@ -133,11 +148,11 @@ body {
   width: 14px;
   height: 14px;
   margin: 5px;
-
   border-radius: 50%; /* Makes it a circle */
   color: rgb(141, 141, 141);
   cursor: pointer;
 }
+
 
 .expand {
   background-color: rgb(192, 192, 192);

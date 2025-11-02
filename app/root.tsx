@@ -136,9 +136,9 @@ export default function App() {
           <div>{times.date}</div> */}
         </div>
         <nav className="navbar">
-          <Link to="/" className="hover:underline">
+          {/* <Link to="/" className="hover:underline"> */}
             <div>{times.weekday}, {times.date}</div>
-          </Link>
+          {/* </Link> */}
           {/* <Link to="/notes" className="hover:underline">
             Notes
           </Link>
