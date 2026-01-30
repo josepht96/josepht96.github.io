@@ -1,0 +1,238 @@
+[
+  {
+    "Series Id": "LNS11000000",
+    "adjustment": "Seasonally Adjusted",
+    "Series title": "(Seas) Civilian Labor Force Level",
+    "Labor force status": "Civilian labor force",
+    "Type of data": "Number in thousands",
+    "Age": "16 years and over"
+  },
+  {
+    "Series Id": "LNS12000000",
+    "adjustment": "Seasonally Adjusted",
+    "Series title": "(Seas) Employment Level",
+    "Labor force status": "Employed",
+    "Type of data": "Number in thousands",
+    "Age": "16 years and over"
+  },
+  {
+    "Series Id": "LNS13000000",
+    "adjustment": "Seasonally Adjusted",
+    "Series title": "(Seas) Unemployment Level",
+    "Labor force status": "Unemployed",
+    "Type of data": "Number in thousands",
+    "Age": "16 years and over"
+  },
+  {
+    "Series Id": "LNS14000000",
+    "adjustment": "Seasonally Adjusted",
+    "Series title": "(Seas) Unemployment Rate",
+    "Labor force status": "Unemployment rate",
+    "Type of data": "Percent or rate",
+    "Age": "16 years and over"
+  },
+  {
+    "Series Id": "CES0000000001",
+    "adjustment": "Seasonally Adjusted",
+    "Series Title": "All employees, thousands, total nonfarm, seasonally adjusted",
+    "Super Sector": "Total nonfarm",
+    "Industry": "Total nonfarm",
+    "NAICS Code": "-",
+    "Data Type": "ALL EMPLOYEES, THOUSANDS"
+  },
+  {
+    "Series Id": "CES0500000002",
+    "adjustment": "Seasonally Adjusted",
+    "Series Title": "Average weekly hours of all employees, total private, seasonally adjusted",
+    "Super Sector": "Total private",
+    "Industry": "Total private",
+    "NAICS Code": "-",
+    "Data Type": "AVERAGE WEEKLY HOURS OF ALL EMPLOYEES"
+  },
+  {
+    "Series Id": "CES0500000007",
+    "adjustment": "Seasonally Adjusted",
+    "Series Title": "Average weekly hours of production and nonsupervisory employees, total private, seasonally adjusted",
+    "Super Sector": "Total private",
+    "Industry": "Total private",
+    "NAICS Code": "-",
+    "Data Type": "AVERAGE WEEKLY HOURS OF PRODUCTION AND NONSUPERVISORY EMPLOYEES"
+  },
+  {
+    "Series Id": "CES0500000003",
+    "adjustment": "Seasonally Adjusted",
+    "Series Title": "Average hourly earnings of all employees, total private, seasonally adjusted",
+    "Super Sector": "Total private",
+    "Industry": "Total private",
+    "NAICS Code": "-",
+    "Data Type": "AVERAGE HOURLY EARNINGS OF ALL EMPLOYEES"
+  },
+  {
+    "Series Id": "CES0500000008",
+    "adjustment": "Seasonally Adjusted",
+    "Series Title": "Average hourly earnings of production and nonsupervisory employees, total private, seasonally adjusted",
+    "Super Sector": "Total private",
+    "Industry": "Total private",
+    "NAICS Code": "-",
+    "Data Type": "AVERAGE HOURLY EARNINGS OF PRODUCTION AND NONSUPERVISORY EMPLOYEES"
+  },
+  {
+    "Series Id": "PRS85006092",
+    "Sector": "Nonfarm Business",
+    "Measure": "Labor productivity (output per hour)",
+    "Duration": "% Change from previous quarter",
+    "Base Year": "-"
+  },
+  {
+    "Series Id": "PRS85006112",
+    "Sector": "Nonfarm Business",
+    "Measure": "Unit labor costs",
+    "Duration": "% Change from previous quarter",
+    "Base Year": "-"
+  },
+  {
+    "Series Id": "PRS85006152",
+    "Sector": "Nonfarm Business",
+    "Measure": "Real hourly compensation",
+    "Duration": "% Change from previous quarter",
+    "Base Year": "-"
+  },
+  {
+    "Series Id": "MPU4910012 (02)",
+    "Series Title": "Total factor productivity for Private Nonfarm Business Sector (NAICS 113-81), Indexes = 100.000",
+    "Sector": "Private Nonfarm Business Sector (NAICS XG)",
+    "Measure": "Total factor productivity",
+    "Duration": "Indexes = 100.000",
+    "Base Year": "2017"
+  },
+  {
+    "Series Id": "CUUR0000SA0",
+    "adjustment": "Not Seasonally Adjusted",
+    "Series Title": "All items in U.S. city average, all urban consumers, not seasonally adjusted",
+    "Area": "U.S. city average",
+    "Item": "All items",
+    "Base Period": "1982-84=100"
+  },
+  {
+    "Series Id": "CUUR0000AA0",
+    "adjustment": "Not Seasonally Adjusted",
+    "Series Title": "All items - old base in U.S. city average, all urban consumers, not seasonally adjusted",
+    "Area": "U.S. city average",
+    "Item": "All items - old base",
+    "Base Period": "1967=100"
+  },
+  {
+    "Series Id": "CWUR0000SA0",
+    "adjustment": "Not Seasonally Adjusted",
+    "Series Title": "All items in U.S. city average, urban wage earners and clerical workers, not seasonally adjusted",
+    "Area": "U.S. city average",
+    "Item": "All items",
+    "Base Period": "1982-84=100"
+  },
+  {
+    "Series Id": "CUUR0000SA0L1E",
+    "adjustment": "Not Seasonally Adjusted",
+    "Series Title": "All items less food and energy in U.S. city average, all urban consumers, not seasonally adjusted",
+    "Area": "U.S. city average",
+    "Item": "All items less food and energy",
+    "Base Period": "1982-84=100"
+  },
+  {
+    "Series Id": "CWUR0000SA0L1E",
+    "adjustment": "Not Seasonally Adjusted",
+    "Series Title": "All items less food and energy in U.S. city average, urban wage earners and clerical workers, not seasonally adjusted",
+    "Area": "U.S. city average",
+    "Item": "All items less food and energy",
+    "Base Period": "1982-84=100"
+  },
+  {
+    "Series Id": "WPSFD4",
+    "adjustment": "Seasonally Adjusted",
+    "Series Title": "PPI Commodity data for Final demand, seasonally adjusted",
+    "Group": "Final demand",
+    "Item": "Final demand",
+    "Base Date": "200911"
+  },
+  {
+    "Series Id": "WPUFD4",
+    "adjustment": "Not Seasonally Adjusted",
+    "Series Title": "PPI Commodity data for Final demand, not seasonally adjusted",
+    "Group": "Final demand",
+    "Item": "Final demand",
+    "Base Date": "200911"
+  },
+  {
+    "Series Id": "WPUFD49104",
+    "adjustment": "Not Seasonally Adjusted",
+    "Series Title": "PPI Commodity data for Final demand less foods and energy, not seasonally adjusted",
+    "Group": "Final demand",
+    "Item": "Final demand less foods and energy",
+    "Base Date": "201004"
+  },
+  {
+    "Series Id": "WPUFD49116",
+    "adjustment": "Not Seasonally Adjusted",
+    "Series Title": "PPI Commodity data for Final demand less foods, energy, and trade services, not seasonally adjusted",
+    "Group": "Final demand",
+    "Item": "Final demand less foods, energy, and trade services",
+    "Base Date": "201308"
+  },
+  {
+    "Series Id": "WPUFD49207",
+    "adjustment": "Not Seasonally Adjusted",
+    "Series Title": "PPI Commodity data for Final demand-Finished goods, not seasonally adjusted",
+    "Group": "Final demand",
+    "Item": "Finished goods",
+    "Base Date": "198200"
+  },
+  {
+    "Series Id": "EIUIR",
+    "Series Title": "Monthly import price index for BEA End Use, All commodities, not seasonally adjusted",
+    "Index Type": "BEA End Use Import Price Indexes",
+    "Item": "All commodities",
+    "Base Period": "2000=100"
+  },
+  {
+    "Series Id": "EIUIQ",
+    "Series Title": "Monthly export price index for BEA End Use, All commodities, not seasonally adjusted",
+    "Index Type": "BEA End Use Export Price Indexes",
+    "Item": "All commodities",
+    "Base Period": "2000=100"
+  },
+  {
+    "Series Id": "CIU1010000000000A (B,C)",
+    "adjustment": "Not seasonally adjusted",
+    "Series Title": "Total compensation for all civilian workers, 12-month percent change, current dollars",
+    "Ownership": "Civilian workers",
+    "Component": "Total compensation",
+    "Occupation": "All occupations",
+    "Industry": "All industries",
+    "Subcategory": "All workers",
+    "Area": "United States (National)",
+    "Periodicity": "12-month percent change, current dollars"
+  },
+  {
+    "Series Id": "CIU2010000000000A (B)",
+    "adjustment": "Not seasonally adjusted",
+    "Series Title": "Total compensation for all private industry workers, 12-month percent change, current dollars",
+    "Ownership": "Private industry workers",
+    "Component": "Total compensation",
+    "Occupation": "All occupations",
+    "Industry": "All industries",
+    "Subcategory": "All workers",
+    "Area": "United States (National)",
+    "Periodicity": "12-month percent change, current dollars"
+  },
+  {
+    "Series Id": "CIU2020000000000A",
+    "adjustment": "Not seasonally adjusted",
+    "Series Title": "Wages and salaries for all private industry workers, 12-month percent change, current dollars",
+    "Ownership": "Private industry workers",
+    "Component": "Wages and salaries",
+    "Occupation": "All occupations",
+    "Industry": "All industries",
+    "Subcategory": "All workers",
+    "Area": "United States (National)",
+    "Periodicity": "12-month percent change, current dollars"
+  }
+]
